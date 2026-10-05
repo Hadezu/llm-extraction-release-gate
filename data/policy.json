@@ -1,0 +1,5 @@
+{
+  "min_candidate_rate": 0.9,
+  "max_case_regressions": 0,
+  "critical_all_pass": true
+}

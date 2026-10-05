@@ -1,0 +1,4 @@
+* text=auto eol=lf
+evidence/** -text
+*.png binary
+*.webm binary
