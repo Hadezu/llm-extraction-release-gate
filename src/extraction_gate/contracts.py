@@ -143,4 +143,6 @@ class Manifest(Strict):
     prompt_sha256: Digest
     settings: Settings
     evaluator: Literal["extraction-contract-v1"] = "extraction-contract-v1"
-    files: dict[Name, Digest] = Field(default_factory=dict)
+    files: dict[
+        Annotated[str, Field(pattern=r"^[a-zA-Z0-9_-]{1,80}--[0-9]$")], Digest
+    ] = Field(default_factory=dict)

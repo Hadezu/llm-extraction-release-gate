@@ -18,6 +18,15 @@ def test_modified_record_detected(make_run):
         read_run(path)
 
 
+def test_maximum_length_case_id_roundtrips_with_repeat_suffix(make_run, suite):
+    changed = suite.model_copy(deep=True)
+    changed.cases[0].id = "a" * 80
+    path = make_run("long-id", selected_suite=changed)
+    manifest, records = read_run(path)
+    assert manifest.complete
+    assert "a" * 80 + "--1" in records
+
+
 def test_missing_record_detected(make_run):
     path = make_run("run")
     (path / "daily-sync--0.json").unlink()
