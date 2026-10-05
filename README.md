@@ -8,9 +8,9 @@ This independent Python case compares versions of a structured AI request extrac
 
 By **Ivan Matiushkin with Codex**. Authored synthetic inputs; no client deployment, paid delivery history or production model-quality claim. Extends the evaluation capability shown in the [portfolio AI Lab](https://work.matiushkin.com/en/proof/ai-automation), without changing that website.
 
-![Actual locally generated report from real Qwen inference](docs/images/live-overview.png)
+![Authored regression control: aggregate improvement is blocked because one critical case worsened](docs/images/control-overview.png)
 
-[Watch the recorded walkthrough](docs/images/evaluation-demo.webm) · [Case study](CASE-STUDY.md) · [Architecture](docs/ARCHITECTURE.md) · [Verification](docs/VERIFICATION.md) · [Buyer requirements and fit](docs/MARKET-FIT.md)
+[Watch the recorded walkthrough](docs/images/evaluation-demo.webm) · [Download the offline reports and package](https://github.com/Hadezu/llm-extraction-release-gate/releases/tag/v0.1.0) · [Case study](CASE-STUDY.md) · [Architecture](docs/ARCHITECTURE.md) · [Verification](docs/VERIFICATION.md) · [Buyer requirements and fit](docs/MARKET-FIT.md)
 
 ## Two kinds of evidence, deliberately separated
 
@@ -20,6 +20,8 @@ By **Ivan Matiushkin with Codex**. Authored synthetic inputs; no client deployme
 | **Authored control fixtures**, no model | **26/32 → 30/32**, still **BLOCK**; corrected control **32/32 → PASS** | A critical regression veto works even when the aggregate improves above the absolute floor. These numbers are not model performance. |
 
 The deliverable is the evaluation/release-checking tool. **It does not claim to deliver a production-ready extractor.** The failed real experiment is a useful result, not a hidden defect or a benchmark ranking of Qwen.
+
+[See the actual Qwen result screenshot](docs/images/live-overview.png) and [raw failure detail](docs/images/live-failure.png).
 
 ## Inspect without a model or account
 
