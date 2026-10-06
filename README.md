@@ -1,5 +1,11 @@
 # LLM Extraction Release Gate
 
+<!-- portfolio-navigation:start -->
+[← Project index](https://github.com/Hadezu#selected-implementations) · [AI workflow demonstration](https://work.matiushkin.com/en/proof/ai-automation) · [Describe a similar task](https://work.matiushkin.com/en/contact?example=proof%2Fai-automation)
+
+**Review format:** Offline evaluation reports and reproducible model runs. The recorded real-model candidate failed acceptance; no production extractor is claimed.
+<!-- portfolio-navigation:end -->
+
 [![Verify extraction gate](https://github.com/Hadezu/llm-extraction-release-gate/actions/workflows/verify.yml/badge.svg)](https://github.com/Hadezu/llm-extraction-release-gate/actions/workflows/verify.yml)
 
 **The new prompt scores better. Should you ship it?**
