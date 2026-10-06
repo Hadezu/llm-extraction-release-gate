@@ -8,20 +8,9 @@ This independent Python case compares versions of a structured AI request extrac
 
 By **Ivan Matiushkin with Codex**. Authored synthetic inputs; no client deployment, paid delivery history or production model-quality claim. Extends the evaluation capability shown in the [portfolio AI Lab](https://work.matiushkin.com/en/proof/ai-automation), without changing that website.
 
-## Watch the demonstration
-
-Recorded evaluation report using authored regression-control fixtures. These are not real-model scores; the separate Qwen results remain below.
-
-https://github.com/user-attachments/assets/c7c0af95-ae59-4fc6-a97e-00319c0fb0b0
-
-<details>
-<summary>View a still frame</summary>
-
 ![Authored regression control: aggregate improvement is blocked because one critical case worsened](docs/images/control-overview.png)
 
-</details>
-
-[Download original recording](docs/images/evaluation-demo.webm) · [Download the offline reports and package](https://github.com/Hadezu/llm-extraction-release-gate/releases/tag/v0.1.0) · [Case study](CASE-STUDY.md) · [Architecture](docs/ARCHITECTURE.md) · [Verification](docs/VERIFICATION.md) · [Buyer requirements and fit](docs/MARKET-FIT.md)
+[Download the offline reports and package](https://github.com/Hadezu/llm-extraction-release-gate/releases/tag/v0.1.0) · [Case study](CASE-STUDY.md) · [Architecture](docs/ARCHITECTURE.md) · [Verification](docs/VERIFICATION.md) · [Buyer requirements and fit](docs/MARKET-FIT.md)
 
 ## Two kinds of evidence, deliberately separated
 
@@ -95,3 +84,12 @@ This is a **16-case diagnostic development set**, not held-out evidence or a sta
 No business actions are executed. The published policy is an example acceptance policy, not a universal industry threshold. Adapt the labels, critical cases and thresholds with the product owner before using it for a real application.
 
 **Suitable first paid slice:** one existing extraction workflow, an agreed sanitized evaluation set, a regression check in its CI, and a failure report with raw evidence. [Portfolio text and a relevant email line](docs/COMMERCIAL-USAGE.md).
+
+<details>
+<summary>Technical verification recording</summary>
+
+Original test recording retained as supporting evidence. For the scenario, results and limitations, see the verification documentation above.
+
+[Download the original recording](docs/images/evaluation-demo.webm)
+
+</details>
