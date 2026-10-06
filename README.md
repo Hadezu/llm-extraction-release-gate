@@ -8,9 +8,20 @@ This independent Python case compares versions of a structured AI request extrac
 
 By **Ivan Matiushkin with Codex**. Authored synthetic inputs; no client deployment, paid delivery history or production model-quality claim. Extends the evaluation capability shown in the [portfolio AI Lab](https://work.matiushkin.com/en/proof/ai-automation), without changing that website.
 
+## Watch the demonstration
+
+Recorded evaluation report using authored regression-control fixtures. These are not real-model scores; the separate Qwen results remain below.
+
+https://github.com/user-attachments/assets/c7c0af95-ae59-4fc6-a97e-00319c0fb0b0
+
+<details>
+<summary>View a still frame</summary>
+
 ![Authored regression control: aggregate improvement is blocked because one critical case worsened](docs/images/control-overview.png)
 
-[Watch the recorded walkthrough](docs/images/evaluation-demo.webm) · [Download the offline reports and package](https://github.com/Hadezu/llm-extraction-release-gate/releases/tag/v0.1.0) · [Case study](CASE-STUDY.md) · [Architecture](docs/ARCHITECTURE.md) · [Verification](docs/VERIFICATION.md) · [Buyer requirements and fit](docs/MARKET-FIT.md)
+</details>
+
+[Download original recording](docs/images/evaluation-demo.webm) · [Download the offline reports and package](https://github.com/Hadezu/llm-extraction-release-gate/releases/tag/v0.1.0) · [Case study](CASE-STUDY.md) · [Architecture](docs/ARCHITECTURE.md) · [Verification](docs/VERIFICATION.md) · [Buyer requirements and fit](docs/MARKET-FIT.md)
 
 ## Two kinds of evidence, deliberately separated
 
