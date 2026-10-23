@@ -1,31 +1,30 @@
-# LLM Extraction Release Gate
+# LLM Release Gate — catch regressions before release
+
+Make prompt and model changes reviewable: compare versioned extraction results, retain original responses, and block candidates that fail critical acceptance checks.
 
 <!-- portfolio-navigation:start -->
 [← Project index](https://github.com/Hadezu#selected-implementations) · [AI workflow demonstration](https://work.matiushkin.com/en/proof/ai-automation) · [Describe a similar task](https://work.matiushkin.com/en/contact?example=proof%2Fai-automation)
 
-**Review format:** Offline evaluation reports and reproducible model runs. The recorded real-model candidate failed acceptance; no production extractor is claimed.
 <!-- portfolio-navigation:end -->
 
 [![Verify extraction gate](https://github.com/Hadezu/llm-extraction-release-gate/actions/workflows/verify.yml/badge.svg)](https://github.com/Hadezu/llm-extraction-release-gate/actions/workflows/verify.yml)
 
-**The new prompt scores better. Should you ship it?**
+**Release decisions account for critical regressions as well as aggregate scores.**
 
-This independent Python case compares versions of a structured AI request extractor. It retains the original outputs, checks fixture labels and source quotations, identifies per-case regressions, and produces a release decision with inspectable evidence.
-
-By **Ivan Matiushkin with Codex**. Authored synthetic inputs; no client deployment, paid delivery history or production model-quality claim. Extends the evaluation capability shown in the [portfolio AI Lab](https://work.matiushkin.com/en/proof/ai-automation), without changing that website.
+This Python tool compares versions of a structured AI request extractor. It retains the original outputs, checks fixture labels and source quotations, identifies per-case regressions, and produces a release decision with inspectable evidence.
 
 ![Authored regression control: aggregate improvement is blocked because one critical case worsened](docs/images/control-overview.png)
 
 [Download the offline reports and package](https://github.com/Hadezu/llm-extraction-release-gate/releases/tag/v0.1.0) · [Case study](CASE-STUDY.md) · [Architecture](docs/ARCHITECTURE.md) · [Verification](docs/VERIFICATION.md) · [Buyer requirements and fit](docs/MARKET-FIT.md)
 
-## Two kinds of evidence, deliberately separated
+## Recorded release decisions
 
 | Evidence | Measured result | What it establishes |
 | --- | --- | --- |
 | **Real local Qwen inference**, two prompt versions, 16 requests × 2 runs per version | Baseline **0/32**, candidate **6/32**; candidate **BLOCK** | This small unconstrained model/prompt combination is unsuitable for the defined extraction contract. Better than baseline is insufficient. Raw failures are published. |
 | **Authored control fixtures**, no model | **26/32 → 30/32**, still **BLOCK**; corrected control **32/32 → PASS** | A critical regression veto works even when the aggregate improves above the absolute floor. These numbers are not model performance. |
 
-The deliverable is the evaluation/release-checking tool. **It does not claim to deliver a production-ready extractor.** The failed real experiment is a useful result, not a hidden defect or a benchmark ranking of Qwen.
+The gate rejected the recorded real-model candidate against the defined extraction contract. Control fixtures separately verify that the evaluator blocks critical regressions even when aggregate scores improve.
 
 [See the actual Qwen result screenshot](docs/images/live-overview.png) and [raw failure detail](docs/images/live-failure.png).
 
@@ -99,3 +98,10 @@ Original test recording retained as supporting evidence. For the scenario, resul
 [Download the original recording](docs/images/evaluation-demo.webm)
 
 </details>
+
+
+## Discuss a similar project
+
+I develop complete applications, integrations and focused improvements to existing software. Send the workflow you want to improve and the outcome you need; we can define the scope, delivery stages and acceptance checks together.
+
+**[Discuss your project](https://work.matiushkin.com/en/contact)** · [More implementations](https://github.com/Hadezu) · [Project context and verification scope](PRESENTATION-SCOPE.md)
